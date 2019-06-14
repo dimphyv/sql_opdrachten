@@ -20,7 +20,7 @@ Geef de naam en voornaam van de personen waarbij de laatste letter van de achter
 SELECT persoon_naam, persoon_voornaam FROM persoon WHERE (persoon_naam LIKE '%S')AND (persoon_voornaam LIKE 'F%' OR persoon_voornaam LIKE 'P%');
 
 Geef de namen van de personen van de Nederlandstalige en/of Franstalige taalgroep, hun geslacht ('man' of 'vrouw') en hun taal ('Nederlandstalig' of 'Franstalig').<br>
-SELECT persoon_naam as Naam, persoon_voornaam as Voornaam,  persoon_taal Taal FROM persoon order by persoon_taal, persoon_geslacht;
+SELECT persoon_naam, persoon_voornaam,  persoon_taal, persoon_geslacht FROM persoon order by persoon_taal, persoon_geslacht, persoon_naam;
 
 Hoeveel Franstalige personen zijn er?<br>
 SELECT COUNT(persoon_id) FROM persoon WHERE persoon_taal = 'F';
